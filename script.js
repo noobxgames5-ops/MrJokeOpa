@@ -1,10 +1,10 @@
 const jokes = [
-  ['Dlaczego komputer poszedł do lekarza?', 'Bo złapał wirusa.'],
-  ['Co robi informatyk na plaży?', 'Szuka sieci.'],
-  ['Dlaczego książka z matematyki była smutna?', 'Miała za dużo problemów.'],
-  ['Co mówi ściana do ściany?', 'Spotkamy się na rogu.'],
-  ['Dlaczego duch nie potrafi kłamać?', 'Bo łatwo go przejrzeć.'],
-  ['Jaki jest ulubiony klawisz astronauty?', 'Spacja.']
+  ['Why did the computer go to the doctor?', 'It caught a virus.'],
+  ['What does a programmer do at the beach?', 'Surf the web.'],
+  ['Why was the math book sad?', 'It had too many problems.'],
+  ['What did one wall say to the other?', "I'll meet you at the corner."],
+  ["Why can't ghosts tell lies?", 'You can see right through them.'],
+  ["What's an astronaut's favorite key?", 'The space bar.']
 ];
 let jokeIndex = 0;
 document.querySelector('#next-joke').addEventListener('click', () => {
@@ -18,8 +18,8 @@ document.querySelector('#copy-link').addEventListener('click', async () => {
   url.hash = '';
   try {
     await navigator.clipboard.writeText(url.href);
-    status.textContent = 'Link skopiowany!';
+    status.textContent = 'Link copied!';
   } catch {
-    status.textContent = `Adres strony: ${url.href}`;
+    status.textContent = `Website address: ${url.href}`;
   }
 });
